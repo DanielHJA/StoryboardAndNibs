@@ -10,26 +10,23 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var animal: Animal?
-
     @IBOutlet weak var animalLabel: UILabel!
+    
+    private lazy var counterView: CounterView = {
+        let temp = CounterView.loadViewFromNib()
+        view.addSubview(temp)
+        temp.translatesAutoresizingMaskIntoConstraints = false
+        temp.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        temp.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        temp.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        temp.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        return temp
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        animalLabel.text = animal?.name
-
+        counterView.isHidden = false
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

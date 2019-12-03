@@ -14,15 +14,3 @@ struct Link {
     let image: UIImage? = UIImage(systemName: "antenna.radiowaves.left.and.right")
 }
 
-extension Link {
-    init(urlString: String) {
-        self.url = URL(string: urlString)
-        self.title = url?.extractHostName()
-    }
-}
-
-extension URL {
-    func extractHostName() -> String? {
-        return self.host
-    }
-}

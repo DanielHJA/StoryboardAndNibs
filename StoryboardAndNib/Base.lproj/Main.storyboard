@@ -42,7 +42,7 @@
                     <navigationItem key="navigationItem" id="Z6j-Ht-P1R"/>
                     <connections>
                         <outlet property="tableView" destination="cr5-bt-IlF" id="BBW-Eo-IOe"/>
-                        <segue destination="IZb-bU-nSC" kind="show" identifier="DetailsViewController" id="A3V-w5-6fT"/>
+                        <segue destination="IZb-bU-nSC" kind="show" identifier="DetailsViewController" id="zqw-ti-foY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
